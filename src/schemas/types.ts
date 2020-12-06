@@ -1,11 +1,21 @@
 import  gql  from "graphql-tag";
 
 const typeDefs = gql`
-  type User {
-    id: ID!
-    email: String!
-    firstName: String!
-    lastName: String!
+  type Movie {
+    id: Int!
+    title: String!
+    imdbId: String!
+    casts: [Cast!]
+  }
+
+  type Cast {
+    id: Int!
+    name: String!
+    movies: [Movie!]
+  }
+
+  input CastInput {
+    name: String!
   }
 `;
 

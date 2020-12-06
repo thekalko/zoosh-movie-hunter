@@ -46,7 +46,7 @@ const fetchDummyDataToDatabase = async () => {
         data: {
           title: movie.node.title,
           imdbId: movie.node.details.imdbID,
-          cast: {
+          casts: {
             connectOrCreate: movie.node.credits.cast.map(credit => {
               return {
                 where: {

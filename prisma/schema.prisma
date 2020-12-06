@@ -11,7 +11,7 @@ model Movie {
   id      Int      @default(autoincrement()) @id
   title   String
   imdbId  String   @unique
-  cast  Cast[]     @relation(name: "CastToActorRelation")
+  casts    Cast[]     @relation(name: "CastToActorRelation")
 }
 
 model Cast {
