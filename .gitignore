@@ -20,3 +20,4 @@ export-*.zip
 # Yarn
 yarn-error.log
 .env.production
+prisma/migrations
