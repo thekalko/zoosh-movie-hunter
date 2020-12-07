@@ -17,6 +17,13 @@ const typeDefs = gql`
   input CastInput {
     name: String!
   }
+
+  type ExtendedMovieResponse {
+    title: String!
+    imdbUrl: String!
+    wikiUrl: String!
+    wikiDescription: String!
+  }
 `;
 
 export default typeDefs;
