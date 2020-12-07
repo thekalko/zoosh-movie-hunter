@@ -20,6 +20,10 @@ export interface ExtendedMovieResponse {
   wikiDescription: string;
 }
 
+export interface FindSimularMoviesByCastArgs {
+  castId: number;
+}
+
 export default {
   movies: async (_: void, args: void, ctx: ApolloContext): Promise<Array<Movie>> | never => {
     return await prisma.movie.findMany({
@@ -78,5 +82,19 @@ export default {
     } catch (error) {
       throw new ApolloError(error)
     }
+  },
+  findSimularMoviesByCast: async (_: void, args: FindSimularMoviesByCastArgs, ctx: ApolloContext): Promise<Array<Movie>> | never => {
+    return await prisma.movie.findMany({
+      where: {
+          casts: {
+            some: {
+              id: args.castId
+            }
+          }
+      },
+      include: {
+        casts: true
+      }
+    });
   },
 };

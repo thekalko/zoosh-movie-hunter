@@ -5,6 +5,7 @@ const typeQuery = gql`
     movies: [Movie!]
     movieSearch(searchValue: String!): [Movie!]
     fetchMovieFromWikipedia(movieId: Int!): ExtendedMovieResponse!
+    findSimularMoviesByCast(castId: Int!): [Movie!]
   }
 `;
 
