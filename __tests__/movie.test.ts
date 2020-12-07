@@ -19,18 +19,18 @@ const createTestServer = () => {
   }));
 }
 
-describe('user tests', () => {
-  it('fetch users', async () => {
+describe('movies test', () => {
+  it('fetch movies', async () => {
 
     const {query} = createTestServer();
   
-    const USERS_QUERY = `query { 
-      users { 
-        email
+    const MOVIES_QUERY = `query { 
+      movies { 
+        title
       }
     }`;
   
-    const res = await query({ query: USERS_QUERY});
+    const res = await query({ query: MOVIES_QUERY});
     expect(res).toMatchSnapshot();
   });
 })
