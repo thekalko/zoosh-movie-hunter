@@ -85,6 +85,11 @@ query FindMovieByTitleOrCast {
 }
 ```
 
+## Just run an easy test with jest
+```
+yarn test
+```
+
 ## Additional info
 ### You can use the prisma studio its open you for a database GUI editor
 ```
