@@ -7,9 +7,15 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model User {
+model Movie {
   id      Int      @default(autoincrement()) @id
-  email   String   @unique
-  name    String?
-  address String?
+  title   String
+  imdbId  String   @unique
+  casts    Cast[]     @relation(name: "CastToActorRelation")
+}
+
+model Cast {
+  id      Int      @default(autoincrement()) @id
+  name    String   @unique() 
+  movies  Movie[]  @relation(name: "CastToActorRelation")
 }

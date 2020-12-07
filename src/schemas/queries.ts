@@ -2,7 +2,10 @@ import  gql  from "graphql-tag";
 
 const typeQuery = gql`
   type Query {
-    users: [User]
+    movies: [Movie!]
+    movieSearch(searchValue: String!): [Movie!]
+    fetchMovieFromWikipedia(movieId: Int!): ExtendedMovieResponse!
+    findSimularMoviesByCast(castId: Int!): [Movie!]
   }
 `;
 

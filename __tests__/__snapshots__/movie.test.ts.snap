@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movies test fetch movies 1`] = `
+Object {
+  "data": Object {
+    "movies": Array [
+      Object {
+        "title": "Gabriel's Inferno Part II",
+      },
+      Object {
+        "title": "Gabriel's Inferno",
+      },
+      Object {
+        "title": "The Shawshank Redemption",
+      },
+      Object {
+        "title": "The Godfather",
+      },
+      Object {
+        "title": "Dilwale Dulhania Le Jayenge",
+      },
+      Object {
+        "title": "Dedicated to my ex",
+      },
+      Object {
+        "title": "Schindler's List",
+      },
+      Object {
+        "title": "Your Name.",
+      },
+      Object {
+        "title": "The Godfather: Part II",
+      },
+      Object {
+        "title": "Spirited Away",
+      },
+      Object {
+        "title": "Parasite",
+      },
+      Object {
+        "title": "The Green Mile",
+      },
+      Object {
+        "title": "My Hero Academia: Heroes Rising",
+      },
+      Object {
+        "title": "Pulp Fiction",
+      },
+      Object {
+        "title": "Hamilton",
+      },
+      Object {
+        "title": "The Lord of the Rings: The Return of the King",
+      },
+      Object {
+        "title": "Clouds",
+      },
+      Object {
+        "title": "Life Is Beautiful",
+      },
+      Object {
+        "title": "The Dark Knight",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

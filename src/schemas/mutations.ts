@@ -2,7 +2,7 @@ import  gql  from "graphql-tag";
 
 const typeMutation = gql`
   type Mutation {
-    createUser(name: String!, email: String!,): User! 
+    createMovie(title: String!, casts: [CastInput], imdbId: String!): Movie!
   }
 `;
 
